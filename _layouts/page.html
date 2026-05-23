@@ -2,13 +2,13 @@
 layout: default
 ---
 
-<div class="jumbotron jumbotron-compact">
-    <div class="container">
-        <h1>
-            <a href="/">{{ site.name }}</a>
-        </h1>
-        <p>{{ page.title }}</p>
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-breadcrumb">
+      <a href="/">ShareX</a><span class="sep">/</span><span>{{ page.title }}</span>
     </div>
-</div>
+    <h1>{{ page.title }}</h1>
+  </div>
+</section>
 
 {{ content }}

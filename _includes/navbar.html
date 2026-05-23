@@ -1,49 +1,92 @@
-<nav class="navbar navbar-expand-md">
-    <div class="container {% unless page.title %}container-home{% endunless %}">
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-            <span>
-                <i class="fa-solid fa-bars"></i>
-            </span>
-        </button>
+<header>
+  <nav class="lp-nav">
+    <button class="lp-nav-toggle" id="lp-nav-toggle" type="button" aria-label="Toggle navigation">
+      <svg viewBox="0 0 18 18">
+        <line x1="1" y1="4"  x2="17" y2="4"/>
+        <line x1="1" y1="9"  x2="17" y2="9"/>
+        <line x1="1" y1="14" x2="17" y2="14"/>
+      </svg>
+    </button>
 
-        <div class="collapse navbar-collapse" id="navbar">
-            <ul class="navbar-nav nav-main mr-auto">
-                <li class="nav-item{% unless page.title %} active{% endunless %}"><a class="nav-link" href="/">Home</a></li>
-                <li class="nav-item{% if page.title == 'Downloads' %} active{% endif %}"><a class="nav-link" href="/downloads">Downloads</a></li>
-                <li class="nav-item{% if page.title == 'Changelog' %} active{% endif %}"><a class="nav-link" href="/changelog">Changelog</a></li>
-                <li class="nav-item{% if page.title == 'Screenshots' %} active{% endif %}"><a class="nav-link" href="/screenshots">Screenshots</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Other</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="/image-effects">Image effects</a>
-                        <a class="dropdown-item" href="/actions">Actions</a>
-                        <a class="dropdown-item" href="/docs/dev-builds">Dev builds</a>
-                        <a class="dropdown-item" href="/docs/keybinds">Keybinds</a>
-                        <a class="dropdown-item" href="/docs/scrolling-screenshot">Scrolling screenshot</a>
-                        <a class="dropdown-item" href="/docs/command-line-arguments">Command line arguments</a>
-                        <a class="dropdown-item" href="/docs/translation">Translation</a>
-                        <a class="dropdown-item" href="/docs/ocr">OCR</a>
-                        <a class="dropdown-item" href="/docs/custom-uploader">Custom uploader</a>
-                        <a class="dropdown-item" href="/docs/amazon-s3">Amazon S3 guide</a>
-                        <a class="dropdown-item" href="/docs/google-cloud-storage">Google Cloud Storage guide</a>
-                        <a class="dropdown-item" href="/docs/cloudflare-r2">Cloudflare R2 guide</a>
-                        <a class="dropdown-item" href="/brand-assets">Brand assets</a>
-                        <a class="dropdown-item" href="https://github.com/topics/sharex">ShareX related projects on GitHub</a>
-                    </div>
-                </li>
-                <li class="nav-item{% if page.title == 'Donate' %} active{% endif %}"><a class="nav-link" href="/donate">Donate</a></li>
-            </ul>
-
-            <ul class="navbar-nav nav-links">
-                <li class="nav-item"><a class="nav-link" href="{{ site.github }}" data-toggle="tooltip" data-placement="bottom" title="GitHub">
-                        <i class="fa-brands fa-github fa-fw"></i></a></li>
-                <li class="nav-item"><a class="nav-link" href="https://x.com/{{ site.twitter }}" data-toggle="tooltip" data-placement="bottom" title="X">
-                        <i class="fa-brands fa-x-twitter fa-fw"></i></a></li>
-                <li class="nav-item"><a class="nav-link" href="https://discord.gg/ShareX" data-toggle="tooltip" data-placement="bottom" title="Discord">
-                        <i class="fa-brands fa-discord fa-fw"></i></a></li>
-                <li class="nav-item"><a class="nav-link" href="https://www.reddit.com/r/sharex" data-toggle="tooltip" data-placement="bottom" title="Reddit">
-                        <i class="fa-brands fa-reddit-alien fa-fw"></i></a></li>
-            </ul>
-        </div>
+    <div class="lp-nav-menu" id="lp-nav-menu">
+      <ul class="lp-nav-links">
+        <li><a href="/" {% if page.url == '/' %}class="active"{% endif %}>Home</a></li>
+        <li><a href="/downloads" {% if page.title == 'Downloads' %}class="active"{% endif %}>Downloads</a></li>
+        <li><a href="/screenshots" {% if page.title == 'Screenshots' %}class="active"{% endif %}>Screenshots</a></li>
+        <li><a href="/changelog" {% if page.title == 'Changelog' %}class="active"{% endif %}>Changelog</a></li>
+        <li class="lp-nav-has-dropdown">
+          <a href="/docs/custom-uploader" {% if page.layout == 'markdown' %}class="active"{% endif %}>
+            Docs
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </a>
+          <div class="lp-nav-dropdown">
+            <a href="/docs/custom-uploader">Custom uploader</a>
+            <a href="/docs/ocr">OCR</a>
+            <a href="/docs/keybinds">Keybinds</a>
+            <a href="/docs/scrolling-screenshot">Scrolling screenshot</a>
+            <a href="/docs/command-line-arguments">Command line arguments</a>
+            <a href="/docs/region-capture">Region capture</a>
+            <a href="/docs/translation">Translation</a>
+            <div class="lp-dropdown-divider"></div>
+            <a href="/docs/amazon-s3">Amazon S3 guide</a>
+            <a href="/docs/google-cloud-storage">Google Cloud Storage</a>
+            <a href="/docs/cloudflare-r2">Cloudflare R2</a>
+            <div class="lp-dropdown-divider"></div>
+            <a href="/docs/dev-builds">Dev builds</a>
+            <a href="/image-effects">Image effects</a>
+            <a href="/actions">Actions</a>
+            <a href="/brand-assets">Brand assets</a>
+          </div>
+        </li>
+        <li>
+          <a href="/donate" class="lp-nav-donate" {% if page.title == 'Donate' %}style="color:#e8f2fa"{% endif %}>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#5a7080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+            Donate
+          </a>
+        </li>
+      </ul>
+      <div class="lp-nav-social">
+        <a href="{{ site.github }}" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://x.com/{{ site.twitter }}" target="_blank" rel="noopener" aria-label="X / Twitter">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://discord.gg/ShareX" target="_blank" rel="noopener" aria-label="Discord">
+          <i class="fa-brands fa-discord"></i>
+        </a>
+        <a href="https://www.reddit.com/r/sharex" target="_blank" rel="noopener" aria-label="Reddit">
+          <i class="fa-brands fa-reddit-alien"></i>
+        </a>
+      </div>
     </div>
-</nav>
+  </nav>
+</header>
+
+<script>
+  (function() {
+    var toggle = document.getElementById('lp-nav-toggle');
+    var menu   = document.getElementById('lp-nav-menu');
+    if (!toggle || !menu) return;
+
+    toggle.addEventListener('click', function() {
+      menu.classList.toggle('open');
+    });
+
+    // Mobile dropdown toggle
+    var dropdowns = document.querySelectorAll('.lp-nav-has-dropdown');
+    dropdowns.forEach(function(item) {
+      var link = item.querySelector('a');
+      link.addEventListener('click', function(e) {
+        if (window.innerWidth <= 860) {
+          e.preventDefault();
+          item.classList.toggle('open');
+        }
+      });
+    });
+  })();
+</script>

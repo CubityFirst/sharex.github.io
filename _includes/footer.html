@@ -1,33 +1,48 @@
-<footer>
+<footer class="lp-footer">
+  <div class="lp-footer-top">
     <div>
-        <a class="shields" href="https://github.com/ShareX/ShareX/stargazers" data-toggle="tooltip" data-placement="top" title="GitHub">
-            <img src="https://img.shields.io/github/stars/ShareX/ShareX?label=Star&style=social" alt="GitHub" /></a>
-        <a class="shields" href="https://x.com/intent/follow?screen_name=ShareX" data-toggle="tooltip" data-placement="top" title="X">
-            <img src="https://img.shields.io/twitter/follow/ShareX" alt="X" /></a>
-        <a class="shields" href="https://discord.gg/ShareX" data-toggle="tooltip" data-placement="top" title="Discord">
-            <img src="https://img.shields.io/discord/194170124859736065?label=Join&logo=Discord&style=social" alt="Discord" /></a>
-        <a class="shields" href="https://www.reddit.com/r/sharex" data-toggle="tooltip" data-placement="top" title="Reddit">
-            <img src="https://img.shields.io/reddit/subreddit-subscribers/ShareX?label=Follow&style=social" alt="Reddit" /></a>
-        <p>Copyright &copy; 2007-{{ site.time | date: '%Y' }} <a href="https://github.com/orgs/ShareX/people">{{ site.author }}</a> · <a href="/privacy-policy">Privacy Policy</a></p>
+      <div class="lp-footer-brand-name">
+        <img src="/img/ShareX_Logo_512.png" alt="ShareX" />
+        ShareX
+      </div>
+      <p class="lp-footer-tagline">Free and open source screen capture, file sharing and productivity tool for Windows.</p>
     </div>
+    <div class="lp-footer-cols">
+      <div class="lp-footer-col">
+        <div class="lp-footer-col-title">Product</div>
+        <a href="/downloads">Downloads</a>
+        <a href="/changelog">Changelog</a>
+        <a href="/screenshots">Screenshots</a>
+        <a href="/brand-assets">Brand Assets</a>
+      </div>
+      <div class="lp-footer-col">
+        <div class="lp-footer-col-title">Docs</div>
+        <a href="/docs/custom-uploader">Custom Uploader</a>
+        <a href="/docs/ocr">OCR</a>
+        <a href="/docs/keybinds">Keybinds</a>
+        <a href="/docs/amazon-s3">Amazon S3</a>
+      </div>
+      <div class="lp-footer-col">
+        <div class="lp-footer-col-title">Community</div>
+        <a href="{{ site.github }}" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://discord.gg/ShareX" target="_blank" rel="noopener">Discord</a>
+        <a href="https://www.reddit.com/r/sharex" target="_blank" rel="noopener">Reddit</a>
+        <a href="https://x.com/{{ site.twitter }}" target="_blank" rel="noopener">X / Twitter</a>
+      </div>
+    </div>
+  </div>
+  <div class="lp-footer-bottom">
+    <span>&copy; 2007&ndash;{{ site.time | date: '%Y' }} <a href="https://github.com/orgs/ShareX/people">{{ site.author }}</a></span>
+    <a href="/privacy-policy">Privacy Policy</a>
+  </div>
 </footer>
 
-<script>
-    $(document).ready(function() {
-        $('[data-toggle="tooltip"]:not([title=""])').tooltip({
-            trigger: "hover"
-        });
-    });
-</script>
-
 {% if page.title != "Authorization" %}
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TSRVCS0KMR"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-TSRVCS0KMR');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TSRVCS0KMR');
 </script>
 {% endif %}
