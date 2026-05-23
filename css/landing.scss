@@ -159,7 +159,7 @@
 // ── SECTION SHARED ───────────────────────────────────────────────────────────
 
 .lp-section {
-  padding: 80px 48px;
+  padding: 48px 48px;
   border-top: 1px solid var(--border);
 }
 
@@ -189,7 +189,7 @@
   color: #d0e0ea;
   letter-spacing: -1px;
   line-height: 1.15;
-  margin-bottom: 14px;
+  margin: 0 0 14px;
 }
 
 .lp-section-sub {
@@ -253,10 +253,21 @@
   line-height: 1.65;
 }
 
+// ── SPLIT SECTIONS (capture / share) ─────────────────────────────────────────
+
+.lp-split-section {
+  padding: 48px 48px;
+  border-top: 1px solid var(--border);
+}
+
+.lp-split-section-alt {
+  background: var(--bg-alt, #08090d);
+}
+
 // ── TOOLS SECTION ────────────────────────────────────────────────────────────
 
 .lp-tools-section {
-  padding: 80px 48px;
+  padding: 48px 48px;
   background: var(--bg-alt, #08090d);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
@@ -264,16 +275,22 @@
 
 .lp-tools-layout {
   display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 64px;
+  grid-template-columns: 260px 240px 1fr;
+  gap: 48px;
   align-items: start;
 }
 
 .lp-tools-header {
   position: sticky;
   top: 32px;
+  align-self: start;
+}
 
-  .lp-section-sub { margin: 0; max-width: 320px; }
+.lp-tools-mid {
+  position: sticky;
+  top: 32px;
+
+  .lp-section-sub { margin: 0; max-width: 240px; }
 }
 
 .lp-tools-grid {
@@ -313,7 +330,7 @@
 // ── CTA ──────────────────────────────────────────────────────────────────────
 
 .lp-cta {
-  padding: 80px 48px;
+  padding: 48px 48px;
   border-top: 1px solid var(--border);
   text-align: center;
   position: relative;
@@ -365,13 +382,14 @@
     justify-content: space-evenly;
   }
 
-  .lp-section { padding: 60px 24px; }
+  .lp-section { padding: 36px 24px; }
   .lp-feature-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
 
-  .lp-tools-section { padding: 60px 24px; }
-  .lp-tools-layout { grid-template-columns: 1fr; gap: 32px; }
-  .lp-tools-header { position: static; }
-  .lp-cta { padding: 60px 24px; }
+  .lp-split-section { padding: 36px 24px; }
+  .lp-tools-section { padding: 36px 24px; }
+  .lp-tools-layout { grid-template-columns: 1fr; gap: 24px; }
+  .lp-tools-header, .lp-tools-mid { position: static; }
+  .lp-cta { padding: 36px 24px; }
 }
 
 @media (max-width: 600px) {
