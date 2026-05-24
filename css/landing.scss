@@ -170,7 +170,7 @@
 
 .lp-section-header {
   text-align: center;
-  margin-bottom: 56px;
+  margin-bottom: 28px;
 }
 
 .lp-section-eyebrow {
@@ -213,11 +213,19 @@
   border: 1px solid var(--border);
   border-radius: 10px;
   transition: border-color 0.2s;
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 14px;
+  row-gap: 10px;
+  align-items: center;
 
   &:hover { border-color: #1a3040; }
 }
 
 .lp-feature-icon {
+  grid-column: 1;
+  grid-row: 1;
   width: 36px;
   height: 36px;
   border-radius: 8px;
@@ -226,7 +234,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 14px;
 
   svg {
     width: 17px;
@@ -240,17 +247,34 @@
 }
 
 .lp-feature-title {
+  grid-column: 2;
+  grid-row: 1;
   font-family: 'Space Grotesk', sans-serif;
   font-size: 17px;
   font-weight: 600;
   color: #c0d8e8;
-  margin-bottom: 8px;
+  margin-bottom: 0;
 }
 
 .lp-feature-desc {
+  grid-column: 1 / -1;
+  grid-row: 2;
   font-size: 14px;
   color: var(--faint);
   line-height: 1.65;
+}
+
+// ── SECTION LABELS ───────────────────────────────────────────────────────────
+
+.lp-section-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  text-align: center;
+  padding-bottom: 24px;
 }
 
 // ── SPLIT SECTIONS (capture / share) ─────────────────────────────────────────
@@ -304,7 +328,7 @@
   align-items: center;
   gap: 6px;
   padding: 6px 12px;
-  border-radius: 20px;
+  border-radius: 5px;
   background: #0a1a26;
   border: 1px solid #1a3040;
   font-size: 12px;
@@ -312,17 +336,6 @@
   transition: border-color 0.15s, color 0.15s;
 
   &:hover { border-color: #2a4a60; color: #80b0c8; }
-
-  svg {
-    width: 11px;
-    height: 11px;
-    stroke: var(--blue);
-    fill: none;
-    stroke-width: 2.5;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    flex-shrink: 0;
-  }
 
   a { color: inherit; }
 }

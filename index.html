@@ -5,6 +5,7 @@ layout: landing
 <!-- NAV -->
 <header>
   <nav class="lp-nav">
+  <div class="lp-nav-inner">
     <button class="lp-nav-toggle" id="lp-nav-toggle" type="button" aria-label="Toggle navigation">
       <svg viewBox="0 0 18 18">
         <line x1="1" y1="4"  x2="17" y2="4"/>
@@ -69,6 +70,7 @@ layout: landing
         </a>
       </div>
     </div>
+  </div>
   </nav>
 </header>
 
@@ -112,7 +114,7 @@ layout: landing
          class="lp-btn lp-btn-primary sharex-download sharex-setup"
          data-toggle="tooltip" data-placement="bottom" title="">
         <i class="fa-solid fa-file-arrow-down"></i>
-        Setup
+        Download
       </a>
       <a href="https://github.com/ShareX/DevBuilds/releases/latest"
          class="lp-btn lp-btn-secondary sharex-dev-build"
@@ -126,18 +128,6 @@ layout: landing
          data-toggle="tooltip" data-placement="bottom" title="">
         <i class="fa-solid fa-file-zipper"></i>
         Portable
-      </a>
-      <a href="https://www.microsoft.com/store/apps/9nblggh4z1sp"
-         class="lp-btn lp-btn-secondary sharex-microsoft-store"
-         data-toggle="tooltip" data-placement="bottom" title="">
-        <i class="fa-brands fa-microsoft"></i>
-        Microsoft Store
-      </a>
-      <a href="https://store.steampowered.com/app/400040/ShareX/"
-         class="lp-btn lp-btn-secondary sharex-steam"
-         data-toggle="tooltip" data-placement="bottom" title="">
-        <i class="fa-brands fa-steam"></i>
-        Steam
       </a>
     </div>
 
@@ -255,20 +245,19 @@ layout: landing
         <p class="lp-section-sub">Every capture mode you'll ever need, triggered in an instant with a hotkey.</p>
       </div>
       <div class="lp-tools-grid">
-        {% capture check_icon %}<svg viewBox="0 0 24 24"><polyline points="20 6 9 13.5 4 8.5"/></svg>{% endcapture %}
-        <span class="lp-tool-tag">{{ check_icon }} Fullscreen</span>
-        <span class="lp-tool-tag">{{ check_icon }} Active window</span>
-        <span class="lp-tool-tag">{{ check_icon }} Region</span>
-        <span class="lp-tool-tag">{{ check_icon }} Region (annotate)</span>
-        <span class="lp-tool-tag">{{ check_icon }} Region (light)</span>
-        <span class="lp-tool-tag">{{ check_icon }} Last region</span>
-        <span class="lp-tool-tag">{{ check_icon }} Custom region</span>
-        <span class="lp-tool-tag">{{ check_icon }} Window menu</span>
-        <span class="lp-tool-tag">{{ check_icon }} Monitor menu</span>
-        <span class="lp-tool-tag">{{ check_icon }} Scrolling capture</span>
-        <span class="lp-tool-tag">{{ check_icon }} Auto capture</span>
-        <span class="lp-tool-tag">{{ check_icon }} Screen recording</span>
-        <span class="lp-tool-tag">{{ check_icon }} Screen recording (GIF)</span>
+        <span class="lp-tool-tag">Fullscreen</span>
+        <span class="lp-tool-tag">Active window</span>
+        <span class="lp-tool-tag">Region</span>
+        <span class="lp-tool-tag">Region (annotate)</span>
+        <span class="lp-tool-tag">Region (light)</span>
+        <span class="lp-tool-tag">Last region</span>
+        <span class="lp-tool-tag">Custom region</span>
+        <span class="lp-tool-tag">Window menu</span>
+        <span class="lp-tool-tag">Monitor menu</span>
+        <span class="lp-tool-tag">Scrolling capture</span>
+        <span class="lp-tool-tag">Auto capture</span>
+        <span class="lp-tool-tag">Screen recording</span>
+        <span class="lp-tool-tag">Screen recording (GIF)</span>
       </div>
     </div>
   </section>
@@ -283,21 +272,20 @@ layout: landing
         <p class="lp-section-sub">Connect ShareX to over 80 upload destinations and let it handle the rest. S3, Imgur, Dropbox, FTP, custom APIs, it all works.</p>
       </div>
       <div class="lp-tools-grid">
-        {% capture check_icon %}<svg viewBox="0 0 24 24"><polyline points="20 6 9 13.5 4 8.5"/></svg>{% endcapture %}
-        <span class="lp-tool-tag">{{ check_icon }} Imgur</span>
-        <span class="lp-tool-tag">{{ check_icon }} Amazon S3</span>
-        <span class="lp-tool-tag">{{ check_icon }} Google Drive</span>
-        <span class="lp-tool-tag">{{ check_icon }} Dropbox</span>
-        <span class="lp-tool-tag">{{ check_icon }} OneDrive</span>
-        <span class="lp-tool-tag">{{ check_icon }} GitHub Gist</span>
-        <span class="lp-tool-tag">{{ check_icon }} Pastebin</span>
-        <span class="lp-tool-tag">{{ check_icon }} Custom FTP / SFTP</span>
-        <span class="lp-tool-tag">{{ check_icon }} Custom S3</span>
-        <span class="lp-tool-tag">{{ check_icon }} Clipboard</span>
-        <span class="lp-tool-tag">{{ check_icon }} Local folder</span>
-        <span class="lp-tool-tag">{{ check_icon }} Email</span>
-        <span class="lp-tool-tag">{{ check_icon }} Custom HTTP uploaders</span>
-        <span class="lp-tool-tag">{{ check_icon }} URL shorteners</span>
+        <span class="lp-tool-tag">Imgur</span>
+        <span class="lp-tool-tag">Amazon S3</span>
+        <span class="lp-tool-tag">Google Drive</span>
+        <span class="lp-tool-tag">Dropbox</span>
+        <span class="lp-tool-tag">OneDrive</span>
+        <span class="lp-tool-tag">GitHub Gist</span>
+        <span class="lp-tool-tag">Pastebin</span>
+        <span class="lp-tool-tag">Custom FTP / SFTP</span>
+        <span class="lp-tool-tag">Custom S3</span>
+        <span class="lp-tool-tag">Clipboard</span>
+        <span class="lp-tool-tag">Local folder</span>
+        <span class="lp-tool-tag">Email</span>
+        <span class="lp-tool-tag">Custom HTTP uploaders</span>
+        <span class="lp-tool-tag">URL shorteners</span>
       </div>
     </div>
   </section>
@@ -312,20 +300,19 @@ layout: landing
         <p class="lp-section-sub">No need to juggle a dozen apps. ShareX ships with every tool you need for your daily workflow.</p>
       </div>
       <div class="lp-tools-grid">
-        {% capture check_icon %}<svg viewBox="0 0 24 24"><polyline points="20 6 9 13.5 4 8.5"/></svg>{% endcapture %}
-        <span class="lp-tool-tag">{{ check_icon }} Screen color picker</span>
-        <span class="lp-tool-tag">{{ check_icon }} Ruler</span>
-        <span class="lp-tool-tag">{{ check_icon }} Pin to screen</span>
-        <span class="lp-tool-tag">{{ check_icon }} Image beautifier</span>
-        <span class="lp-tool-tag">{{ check_icon }} Image combiner</span>
-        <span class="lp-tool-tag">{{ check_icon }} Video converter</span>
-        <span class="lp-tool-tag">{{ check_icon }} Video thumbnailer</span>
-        <span class="lp-tool-tag">{{ check_icon }} <a href="/docs/ocr" style="color:inherit">OCR</a></span>
-        <span class="lp-tool-tag">{{ check_icon }} QR code</span>
-        <span class="lp-tool-tag">{{ check_icon }} Hash checker</span>
-        <span class="lp-tool-tag">{{ check_icon }} Clipboard viewer</span>
-        <span class="lp-tool-tag">{{ check_icon }} Borderless window</span>
-        <span class="lp-tool-tag">{{ check_icon }} Monitor test</span>
+        <span class="lp-tool-tag">Screen color picker</span>
+        <span class="lp-tool-tag">Ruler</span>
+        <span class="lp-tool-tag">Pin to screen</span>
+        <span class="lp-tool-tag">Image beautifier</span>
+        <span class="lp-tool-tag">Image combiner</span>
+        <span class="lp-tool-tag">Video converter</span>
+        <span class="lp-tool-tag">Video thumbnailer</span>
+        <span class="lp-tool-tag"><a href="/docs/ocr" style="color:inherit">OCR</a></span>
+        <span class="lp-tool-tag">QR code</span>
+        <span class="lp-tool-tag">Hash checker</span>
+        <span class="lp-tool-tag">Clipboard viewer</span>
+        <span class="lp-tool-tag">Borderless window</span>
+        <span class="lp-tool-tag">Monitor test</span>
       </div>
     </div>
   </section>
